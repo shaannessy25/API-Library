@@ -13,5 +13,11 @@ class Weather {
         return p
     }
 
+    getWeather2(city, api, units) {
+        const path = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
+        const p = fetch(path).then( res => res.json())
+        return p
+    }
+
 }
 
